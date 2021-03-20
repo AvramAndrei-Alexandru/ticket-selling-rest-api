@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "5b8bb6d1-4d0a-41c7-9b94-9435fff49b45",
+		"name": "TicketSystemConcertApiRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all concerts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "andrei",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Andrei",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/concert/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"concert",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create concert",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "andrei",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Andrei",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Added concert\",\r\n        \"artist\": \"ARMIN VAN BUUREN1\",\r\n        \"genre\": \"TRANCE\",\r\n        \"date\": \"2021-08-01\",\r\n        \"time\": \"02:20:00\",\r\n        \"maximumNumberOfTickets\": 100\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/concert/createConcert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"concert",
+						"createConcert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete concert",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "andrei",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Andrei",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/concert/deleteConcert/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"concert",
+						"deleteConcert",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit concert",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "andrei",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Andrei",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Edited concert\",\r\n    \"artist\": \"ARMIN VAN BUUREN1\",\r\n    \"genre\": \"TRANCE\",\r\n    \"date\": \"2021-08-01\",\r\n    \"time\": \"02:20:00\",\r\n    \"maximumNumberOfTickets\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/concert/editConcert/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"concert",
+						"editConcert",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
